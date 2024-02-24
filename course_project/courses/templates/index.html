@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block title %} Home Page {% endblock %}
+{% block content %}
+    {% for course in courses %}
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{course.courseTitle}}</h5>
+      <p class="card-text">{{course.courseDescription}}</p>
+      <a href="{% url 'course_detail' course_id=course.courseID %}" class="btn btn-primary">Read More</a>
+    </div>
+  </div>
+  {% endfor %}
+{% endblock %}

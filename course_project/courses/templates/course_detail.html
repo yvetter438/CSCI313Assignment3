@@ -1,0 +1,18 @@
+<!-- course_detail.html -->
+{% extends "base.html" %}
+{% block title %} {{ Course.courseTitle }} Details {% endblock %}
+{% block content %}
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{ course.courseTitle }}</h5>
+      <p style="color: black" class="card-text"><b>Description:</b> {{ course.courseDescription }}</p>
+      <p style="color: black" class="card-text"><b>Instructor: </b>{{ course.instructor }}</p>
+      <p style="color: black" class="card-text"><b>Credits: </b>{{ course.numOfCredits }}</p>
+      <p style="color: black" class="card-text"><b>Start Date: </b>{{course.startDate }}</p>
+      <!-- Add more information as needed -->
+
+      <!-- Add a link to go back to the home page -->
+     <!--- <a href="{% url 'index' %}" class="btn btn-secondary">Back to Home</a> -->
+    </div>
+  </div>
+{% endblock %}
